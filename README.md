@@ -8,6 +8,7 @@
 - Arnav Kharbanda 
 - Chantera Lazard
 - Jialan Ma
+- Kushal Koirala
 - Kyulin Kim
 - Pu Kao
 - Shreya Nandakumar
