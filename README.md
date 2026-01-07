@@ -1,2 +1,4 @@
 # Rare_disease_subtyping
-Rare Disease subtyping
+
+## Flowchart
+![Flowchart](RareDiseaseFlowchart.png)
