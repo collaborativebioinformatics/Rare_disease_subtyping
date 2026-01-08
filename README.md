@@ -13,7 +13,8 @@ Rare disease genomics research is limited by small sample sizes, heterogeneous a
 
 This project focuses on Amyotrophic Lateral Sclerosis (ALS) and aims to integrate real, publicly available genomic and biological annotations from multiple databases into a single feature space for exploratory analysis
 
-<img width="2456" height="1842" alt="RAIDer flow-2" src="https://github.com/user-attachments/assets/4de9479f-2a92-48d5-9805-c3e3d930f130" />
+<img width="2456" height="1842" alt="RAIDer flow-3" src="https://github.com/user-attachments/assets/2c14a579-d1b7-4e6a-9009-99d4ca71ec2b" />
+
 
 
 # 2. Scientific Goal
