@@ -2,7 +2,7 @@
 
 # 1. Project Overview
 Rare disease genomics faces two major challenges:
-1. Data scarcity, and
+1. Data scarcity
 2. Data silos across biobanks due to privacy constraints.
 
 Rare disease genomics research is limited by small sample sizes, heterogeneous annotations, and fragmented data across institutions. Although many public databases curate valuable information on disease-causing variants, these resources are rarely analysed together in a unified and scalable way.
