@@ -1,5 +1,9 @@
 # RAIDers
 
+![image](https://github.com/collaborativebioinformatics/RAIDers/blob/main/RareDiseaseFlowchart.png)
+
+---
+
 # 1. Project Overview
 Rare disease genomics faces two major challenges:
 1. Data scarcity
