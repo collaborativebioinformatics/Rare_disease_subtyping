@@ -1,0 +1,29 @@
+{
+    "name": "fed_kmeans_k8_r40",
+    "resource_spec": {},
+    "min_clients": 1,
+    "deploy_map": {
+        "app": [
+            "@ALL"
+        ]
+    },
+    "job_folder_name": "fed_kmeans_k8_r40",
+    "byoc": true,
+    "job_clients": [
+        {
+            "name": "AFR"
+        },
+        {
+            "name": "AMR"
+        },
+        {
+            "name": "EAS"
+        },
+        {
+            "name": "EUR"
+        },
+        {
+            "name": "SAS"
+        }
+    ]
+}

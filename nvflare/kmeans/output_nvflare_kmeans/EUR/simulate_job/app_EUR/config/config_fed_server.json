@@ -1,0 +1,36 @@
+{
+    "format_version": 2,
+    "workflows": [
+        {
+            "id": "kmeans_wf",
+            "path": "nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather",
+            "args": {
+                "min_clients": 5,
+                "num_rounds": 40,
+                "aggregator_id": "kmeans_agg",
+                "shareable_generator_id": "kmeans_sg",
+                "train_task_name": "kmeans_step",
+                "allow_empty_global_weights": true
+            }
+        }
+    ],
+    "components": [
+        {
+            "id": "kmeans_agg",
+            "path": "fed_kmeans_components.KMeansAggregator",
+            "args": {
+                "k": 8
+            }
+        },
+        {
+            "id": "kmeans_sg",
+            "path": "fed_kmeans_components.KMeansShareableGenerator",
+            "args": {
+                "k": 8,
+                "init_csv": "/Users/apple/Desktop/Projects/cmu_biohack/data_src_db/clients_data/client_AFR.csv"
+            }
+        }
+    ],
+    "task_data_filters": [],
+    "task_result_filters": []
+}

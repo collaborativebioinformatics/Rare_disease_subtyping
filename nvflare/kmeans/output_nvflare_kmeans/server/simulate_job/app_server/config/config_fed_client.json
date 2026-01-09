@@ -1,0 +1,20 @@
+{
+    "format_version": 2,
+    "executors": [
+        {
+            "tasks": [
+                "kmeans_step"
+            ],
+            "executor": {
+                "path": "fed_kmeans_components.FederatedKMeansExecutor",
+                "args": {
+                    "data_dir": "/Users/apple/Desktop/Projects/cmu_biohack/data_src_db/clients_data",
+                    "k": 8
+                }
+            }
+        }
+    ],
+    "components": [],
+    "task_data_filters": [],
+    "task_result_filters": []
+}
