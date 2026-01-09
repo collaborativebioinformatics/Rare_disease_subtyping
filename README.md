@@ -131,6 +131,6 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 | Paul Kao | | 0009-0003-9047-0160 | National Taiwan University |
 | Shreya Nandakumar | | 0009-0006-9230-3659 | Carnegie Mellon University |
 | Vibha Acharya | via16@pitt.edu | 0000-0001-6598-0052 | University of Pittsburgh |
-| William Lu | | 0000-0002-2768-1489 | Carnegie Mellon University |
+| William Lu | wtlu@andrew.cmu.edu | 0000-0002-2768-1489 | Carnegie Mellon University |
 
 
