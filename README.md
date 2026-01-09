@@ -118,7 +118,6 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 | [**OMIM**](https://www.omim.org) / [**Orphanet**](https://www.orpha.net)| Clinical gene-disease associations |
 
 # Contributers 
-
 |Name| Email | ORCID | Institution | 
 | :--: | :--: | :--: | :--: |
 | Aastha Shah | aasthashah.work@gmail.com | 0009-0008-7811-0177 | Queens University Belfast |
@@ -127,11 +126,11 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 | Chantera Lazard | lazard.c@northeastern.edu | 0009-0006-1367-3812 | Northeastern University | 
 | Jialan Ma | jialanma7@gmail.com |0009-0007-2670-9076 | Broad Institute of MIT and Harvard |
 | Kushal Koirala | kkoirala@unc.edu | 0009-0009-7935-4533 | University of North Carolina | 
-| Kyulin Kim | | | | 
-| Nikita Rajesh | | | | 
-| Paul Kao | | | |
-| Shreya Nandakumar | | | 
-| Vibha Acharya |via16@pitt.edu | 0000-0001-6598-0052| University of Pittsburgh
-| William Lu | | | 
+| Kyulin Kim | | 0009-0007-8976-2405 | University College London | 
+| Nikita Rajesh | | 0009-0009-9850-5261 | Carnegie Mellon University | 
+| Paul Kao | | 0009-0003-9047-0160 | National Taiwan University |
+| Shreya Nandakumar | | 0009-0006-9230-3659 | Carnegie Mellon University |
+| Vibha Acharya | via16@pitt.edu | 0000-0001-6598-0052 | University of Pittsburgh |
+| William Lu | | 0000-0002-2768-1489 | Carnegie Mellon University |
 
 
