@@ -1,4 +1,4 @@
-# RAIDers (Rare Disease AI and Radar)
+# RAIDers (Rare Disease AI)
 
 RAIDers is a federated computational framework designed to resolve the phenotypic heterogeneity of Amyotrophic Lateral Sclerosis (ALS) while maintaining data sovereignty. By synthesizing global genomic annotations with simulated patient cohorts, this framework establishes a scalable architecture for rare disease subtyping.
 
