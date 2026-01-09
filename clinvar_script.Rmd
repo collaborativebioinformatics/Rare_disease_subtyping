@@ -1,0 +1,175 @@
+---
+title: "ASL Clinvar"
+output: html_notebook
+---
+
+```{r}
+clinvar_url <- "https://gist.githubusercontent.com/tera90223/89924deb1a164a7c3029ec259fb5e323/raw/cf36a9bbc4be3091a71e37262be340c20340b789/asl_clinvar_raw.csv"
+
+df <- read.csv(clinvar_url, header=TRUE)
+
+head(df)
+```
+
+
+```{r ColumnNames}
+colnames(df)
+```
+
+```{r ClinvarRelevantFeatures}
+clinvar_features <- c('dbSNP.ID',           # Unique ID
+    'Gene.s.',               # Gene name
+    'Condition.s.',           # Condition
+    'Variant.type',          # SNV, deletion, etc.
+    'Molecular.consequence', # Missense, nonsense, etc.
+    'GRCh38Chromosome',      # Chromosome
+    'GRCh38Location',        # Position
+    'Protein.change',        # Amino acid change
+    'Germline.classification') # Should all be Pathogenic/Likely pathogenic
+```
+
+```{r SelectFeatures}
+clinvar.cleaned.df <- subset(df, select = clinvar_features)
+```
+
+```{r ChangeColumnNames}
+colnames(clinvar.cleaned.df) <- c('rsID', 'gene', 'condition', 'variant_type', 'consequence', 'chromosome', 'position', 'protein_change', 'clinical_sig')
+
+```
+
+```{r}
+head(clinvar.cleaned.df)
+```
+
+
+```{r Missingrsid_summary}
+missing_rsid <- sum(is.na(clinvar.cleaned.df$rsID) | clinvar.cleaned.df$rsID == "")
+missing_pct <- round((missing_rsid / nrow(clinvar.cleaned.df)) * 100,1)
+
+cat(paste0("Missing rsID: ", missing_rsid, " variants (", missing_pct, "%)"))
+``` 
+
+```{r}
+clinvar.cleaned.df$rsID <- ifelse(is.na(clinvar.cleaned.df$rsID) | clinvar.cleaned.df$rsID == "", paste(clinvar.cleaned.df$chromosome, clinvar.cleaned.df$position, sep=":"), clinvar.cleaned.df$rsID)
+```
+
+```{r RemoveNotProvidedConditions}
+library(dplyr)
+missing_conditions <- sum(clinvar.cleaned.df$condition == "not provided")
+clinvar.cleaned.df <- clinvar.cleaned.df %>%
+  filter(!condition == "not provided") %>%
+  filter(!variant_type == "CompoundHeterozygote")
+
+```
+
+```{r ExtractGeneticMutationFunction}
+library(stringr)
+
+extract_mutation <- function(name) {
+  default_return <- data.frame(
+    ref_allele = NA_character_,
+    alt_allele = NA_character_,
+    stringsAsFactors = FALSE
+  )
+  
+  if (is.na(name) || name == "") {
+    return(default_return)
+  }
+  
+  # NEW: Handle compound variants (has semicolon)
+  if (grepl(";", name)) {
+    # Split by semicolon, take first mutation
+    first_mutation <- str_split(name, ";")[[1]][1]
+    # Remove brackets
+    first_mutation <- gsub("\\[|\\]", "", first_mutation)
+    # Call recursively on first mutation
+    return(extract_mutation(first_mutation))
+  }
+  
+  sub_match <- str_extract(name, "[ATCG]+>[ATCG]+")
+  if(!is.na(sub_match)) {
+    alleles <- str_split(sub_match, ">")[[1]]
+    ref <- alleles[1]
+    alt <- alleles[2]
+  
+  return(data.frame(ref_allele = ref, 
+                    alt_allele = alt))
+  }
+  
+  del_match <- str_extract(name, "del[ATCG]*")
+  if(!is.na(del_match)) {
+    deleted <- str_remove(del_match, "del")
+    if(deleted == "") deleted <- "N" # Unknown
+    return(data.frame(ref_allele = deleted, alt_allele = "-"))
+    
+  }
+  
+  # Handle Duplication (dup, dupA, etc.)
+  dup_match <- str_extract(name, "dup[ATCG]*")
+  if(!is.na(dup_match)){
+    dup <- str_remove(dup_match, "dup")
+    if(dup == "") dup <- "N"
+    return(data.frame(ref_allele = dup, alt_allele = paste0(dup, dup), stringsAsFactors = FALSE))
+  }
+  
+  # Handle Insertion (insA, insAA, etc.)
+  ins_match <- str_extract(name, "ins[ATCG]+")
+  if (!is.na(ins_match)) {
+    inserted <- str_remove(ins_match, "ins")
+    return(data.frame(ref_allele = "-",
+                      alt_allele = inserted,
+                      stringsAsFactors = FALSE))
+  }
+  else{
+    # If no match, return NA
+    return(data.frame(ref_allele = NA, 
+                      alt_allele = NA, stringsAsFactors = FALSE))
+  }
+}
+
+```
+
+```{r testFunction}
+test <- extract_mutation("NM_020631.6(PLEKHG5):c.1889C>A (p.Pro630His)")
+
+del_test <- extract_mutation("	
+NM_004082.5(DCTN1):c.3532_3609+7del")
+
+dup_test <- extract_mutation("NM_004082.5(DCTN1):c.626dup (p.Leu210fs)")
+```
+
+```{r}
+# Should print df: ref_allele = "C", alt_allele = "A"
+print(dup_test)
+```
+
+```{r ExtractMutations}
+df <- df %>% 
+  filter(!Condition.s. == "not provided") %>%
+  filter(!Variant.type == "CompoundHeterozygote")
+
+mutations <- do.call(rbind, lapply(df$Name, extract_mutation))
+```
+
+```{r AddtoDF}
+clinvar.cleaned.df$ref_allele <- mutations$ref_allele
+clinvar.cleaned.df$alt_allele <- mutations$alt_allele
+```
+
+```{r}
+write.csv(clinvar.cleaned.df, "clinvar.cleaned.csv")
+```
+
+
+This was not used prior to creating synthetic data.We filtered afterwards, but can be filtered before as well.
+```{r Remove_non_als_conditions}
+non_als_conditions = c("Neuronopathy, distal hereditary motor, type 7B", "Short-rib thoracic dysplasia 6 with or without polydactyly", "Charcot-Marie-Tooth disease type 4", "Charcot-Marie-Tooth disease", "Yunis-Varon syndrome", "Inclusion body myopathy with early-onset Paget disease with or without frontotemporal dementia 2", "Inclusion body myopathy with Paget disease of bone and frontotemporal dementia type 1", "Inborn genetic diseases", "Spastic paraplegia",  "Abnormal central motor function")
+
+clinvar.cleaned.df <- clinvar.cleaned.df %>%
+  filter(!condition %in% non_als_conditions)
+```
+
+
+
+
+
