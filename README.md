@@ -54,8 +54,6 @@ The pipeline utilizes `clinvar.cleaned.csv` to identify approximately 450 pathog
 * **Gene Association:** (e.g., *SOD1, TARDBP, C9orf72*)
 * **Clinical Significance:** Standardized pathogenicity classifications.
 * **Molecular Consequence:** Variant-level impact (missense, nonsense, frameshift).
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6QVPNJGG5gTqp9gRCVeeevwxj8OtXysTr63EvoYmPG-rzDZzSmiSg3tYLuN8w9g/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
   
 <img width="847" height="482" alt="Screenshot 2026-01-09 at 2 16 53 pm" src="https://github.com/user-attachments/assets/80e2c2d6-30cb-4f7a-a849-698a54e755ea" />
 
