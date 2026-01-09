@@ -110,13 +110,6 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 
 ---
 
-## 4. Scientific Objectives
-
-* **Subtype Discovery:** Identifying coherent molecular signatures across diverse ancestral backgrounds.
-* **Feature Validity:** Confirming that integrated annotations contain sufficient signal to distinguish ALS-associated genes.
-* **Federated Feasibility:** Demonstrating that analytical fidelity is maintained when data is physically separated across institutional nodes.
-* **Ground Truth Validation:** Assessing whether discovered subtypes align with the simulated interaction rules.
-
 ---
 
 ## Data Sources
