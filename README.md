@@ -117,7 +117,7 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 | [**gnomAD**](https://gnomad.broadinstitute.org) | Gene & Variant Constraint Scores; Population AFs  | 
 | [**OMIM**](https://www.omim.org) / [**Orphanet**](https://www.orpha.net)| Clinical gene-disease associations |
 
-# Contributers 
+# Contributors 
 |Name| Email | ORCID | Institution | 
 | :--: | :--: | :--: | :--: |
 | Aastha Shah | aasthashah.work@gmail.com | 0009-0008-7811-0177 | Queens University Belfast |
