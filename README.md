@@ -72,9 +72,6 @@ def assign_contextual_phenotype(variant_row, population_id):
     return "Fast Progression" if interaction_score > 0.85 else "Slow Progression"
 
 ```
-
-### 2.4 Age of Onset Assignment Logic (Placeholder for William)
-
 ---
 
 ## 3. Federated Analysis: Subtype Discovery
