@@ -145,6 +145,10 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 **Evaluation on real biobank data**
   - As a longer-term direction, apply our pipeline to real-world biobank datasets to assess performance, scalability, and robustness in practical settings.
 
+**Federated Learning**
+  - Move from NVFlare with a central server to swarm learning (also on NVFlare) with no single owner, so multiple biobanks and rare disease cohorts across countries can train together even when no one can run a shared hub
+  
+
 ## Data Sources
 
 | Database | Purpose |
