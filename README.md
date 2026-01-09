@@ -117,19 +117,22 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 
 ## 4. Future Directions
 
-- **Richer simulated patient data**
+**Biological Validation**
+  - Evaluate if patients with variants in genes associated with specific ALS subtypes are clustered together.
+
+**Richer simulated patient data**
   - Extend the simulated cohort by incorporating additional biological/clinical features derived from prior work, such as:
-    - Patient "background" genotypes around mutations ()
+    - Patient "background" genotypes around mutations
     - Phenotypic annotations (HPO)
     - Protein expression levels
-    - Pathway or network-level features ()
+    - Pathway or network-level features (Orphanet)
   - This would allow evaluation of how the models handle diverse biobank-style data modalities beyond the current setup.
  
-- **Learning paradigms**
+**Learning paradigms**
   - **Unsupervised approaches** to identify latent structure and patient subgroups without predefined labels.
   - Compare against **supervised or semi-supervised approaches** when labels (e.g., subtype labeling, patient outcome) are available
 
-- **Evaluation on real biobank data**
+**Evaluation on real biobank data**
   - As a longer-term direction, apply our pipeline to real-world biobank datasets to assess performance, scalability, and robustness in practical settings.
 
 ## Data Sources
