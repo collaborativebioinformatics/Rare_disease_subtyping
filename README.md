@@ -77,7 +77,7 @@ def assign_contextual_phenotype(variant_row, population_id):
 
 ---
 
-## 3. Federated Analysis: Subtype Discoveryn
+## 3. Federated Analysis: Subtype Discovery
 
 The framework simulates five institutional silos partitioned by superpopulation (AFR, AMR, EAS, EUR, SAS).
 
