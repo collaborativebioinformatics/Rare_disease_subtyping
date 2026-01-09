@@ -105,7 +105,7 @@ Federated learning is introduced at the algorithmic level, not at raw data inges
 
 Client Definition
 - Each client represents an institution
-- Each client is a public database
+- Each client is a cohort of a public database
 
 Federated K-Means
 1. Each client computes:
