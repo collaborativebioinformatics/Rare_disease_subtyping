@@ -129,7 +129,8 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
  
 **Learning paradigms**
   - **Unsupervised approaches** to identify latent structure and patient subgroups without predefined labels.
-  - Compare against **supervised or semi-supervised approaches** when labels (e.g., subtype labeling, patient outcome) are available
+  - **Supervised or semi-supervised approaches** when labels (e.g., subtype labeling, patient outcome) are available
+  - Determine which models best capture patient heterogeneity/disease subtype structure
 
 **Evaluation on real biobank data**
   - As a longer-term direction, apply our pipeline to real-world biobank datasets to assess performance, scalability, and robustness in practical settings.
