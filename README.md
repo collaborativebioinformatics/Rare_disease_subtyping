@@ -1,176 +1,125 @@
-# RAIDers
+# RAIDers (RAre disease AI and Radar)
 
-
+RAIDers is a federated computational framework designed to resolve the phenotypic heterogeneity of Amyotrophic Lateral Sclerosis (ALS) while maintaining data sovereignty. By synthesizing global genomic annotations with simulated patient cohorts, this framework establishes a scalable architecture for rare disease subtyping.
 
 ---
 
-# 1. Project Overview
-Rare disease genomics faces two major challenges:
-1. Data scarcity
-2. Data silos across biobanks due to privacy constraints.
+## Project Overview
 
-Rare disease genomics research is limited by small sample sizes, heterogeneous annotations, and fragmented data across institutions. Although many public databases curate valuable information on disease-causing variants, these resources are rarely analysed together in a unified and scalable way.
+Research in rare disease genomics is primarily hindered by extreme data scarcity and institutional data silos mandated by privacy regulations. While authoritative repositories provide critical intelligence on pathogenic variants, these resources are seldom integrated into a unified analytical space.
 
-This project focuses on Amyotrophic Lateral Sclerosis (ALS) and aims to integrate real, publicly available genomic and biological annotations from multiple databases into a single feature space for exploratory analysis
+RAIDers addresses this fragmentation by consolidating disparate genomic signals into a high-fidelity feature matrix. This architecture serves as a "Genomic Flight Simulator," validating a federated subtyping pipeline on synthetic data to demonstrate readiness for integration with controlled-access biobank datasets.
 
-<img width="2456" height="1842" alt="RAIDer flow-3" src="https://github.com/user-attachments/assets/2c14a579-d1b7-4e6a-9009-99d4ca71ec2b" />
+---
 
+## 1. Pipeline Execution (Placeholder)
 
+To initialize the pipeline from synthetic cohort generation through federated clustering:
 
-# 2. Scientific Goal
+```bash
+# Clone the repository
+git clone https://github.com/project/RAIDers.git
+cd RAIDers
 
+# Run the primary simulation and analysis (Filename TBD)
+python main_pipeline.py
 
-The primary scientific goal of this project is to determine whether molecular subtypes of ALS-associated genes and variants can be identified using integrated real-world annotations, and whether these subtypes reflect biological signal rather than methodological or population-driven artifacts.
+```
 
-Specifically, we aim to answer the following questions:
-1. Subtype Discovery:
-   
-Can unsupervised clustering of integrated variant-level features reveal coherent molecular subtypes among ALS-associated genes?
+*Note: A curated version of `clinvar.cleaned.csv` must be present in the local directory for execution.*
 
-2. Feature Validity:
+---
 
-Do the extracted features contain sufficient biological information to accurately distinguish ALS genes in a supervised classification setting?
+## 2. Synthetic Cohort Generation
 
-3. Methodological Consistency:
-   
-Are the subtypes discovered via unsupervised learning supported by supervised model performance and feature importance analysis?
+To overcome the "mathematical invisibility" of rare variants in standard population samples, RAIDers employs a digital mutagenesis strategy. This allows for the generation of a balanced, statistically significant cohort of 15,000 patients partitioned into five ancestral nodes.
 
-4. Federated Feasibility
+### 2.1 Genomic Anchors: ClinVar
 
-Can clustering and validation be performed in a federated manner that mirrors institutional data separation while preserving analytical fidelity?
+The pipeline utilizes `clinvar.cleaned.csv` to identify approximately 450 pathogenic ALS variants. These records provide the biological ground truth for the simulation, including:
 
-By addressing these questions, the project evaluates whether federated, annotation-driven analysis can support meaningful rare disease stratification using only real, publicly available data, providing a foundation for future extension to controlled-access biobank datasets.
+* **Gene Association:** (e.g., *SOD1, TARDBP, C9orf72*)
+* **Clinical Significance:** Standardized pathogenicity classifications.
+* **Molecular Consequence:** Variant-level impact (missense, nonsense, frameshift).
 
+### 2.2 The Interaction Model: gnomAD AF Integration
 
-# 3. Data Sources 
+Rather than using static lookups, we simulate variable penetrance by treating the ancestral background as a clinical modifier. We utilize **gnomAD Allele Frequency (AF)** logic to determine population-specific "tolerance" to pathogenic variants.
 
-Each participating site has access to a subset of ALS-related genes and variants and integrates information from:
-- ClinVar – pathogenic / likely pathogenic ALS variants
-- gnomAD – population allele frequencies
-- OMIM – gene–disease associations
-- STRING – protein–protein interaction networks
+**Rationale for AF Estimation:**
+Empirical gnomAD frequencies for rare ALS variants are often  or zero in specific subpopulations. Direct application would result in a sparse matrix with insufficient carrier counts for machine learning. We estimate and amplify these frequencies (targeting 0.01% – 0.2%) to ensure analytical viability while maintaining biological realism through Selection penalties (e.g., a 50% AF reduction for Loss-of-Function mutations).
 
+### 2.3 Phenotype Assignment Logic
 
-# Local Data Processing 
+Clinical labels (e.g., Fast vs. Slow Progression) are derived from the interaction between a variant’s baseline impact and its ancestral modifier (the AF Ratio).
 
-All preprocessing is performed locally at each client before any information is shared.
+```python
+def assign_contextual_phenotype(variant_row, population_id):
+    # 1. Mutation Impact (Anchor derived from ClinVar)
+    base_impact = 0.8 if "Pathogenic" in variant_row['clinical_sig'] else 0.5
+    
+    # 2. Ancestral Modifier (gnomAD AF Ratio)
+    # High AF ratio implies population tolerance (Protective Modifier)
+    # Low AF ratio implies population sensitivity (Aggravating Modifier)
+    af_ratio = variant_row[f'gnomAD_AF_{population_id}'] / variant_row['gnomAD_AF']
+    modifier = 0.8 if af_ratio > 1.5 else (1.2 if af_ratio < 0.5 else 1.0)
+    
+    # 3. Probabilistic Interaction (with 5-10% stochastic noise)
+    interaction_score = (base_impact * modifier) + np.random.normal(0, 0.05)
+    
+    return "Fast Progression" if interaction_score > 0.85 else "Slow Progression"
 
-1. Text Embedding Generation
-- Free-text fields (e.g. variant descriptions, disease annotations, phenotype summaries)
-- Embedded locally using PubMedBERT
-- Output: dense semantic embedding vectors
+```
 
-2. Numerical Feature Normalization
+---
 
-Examples include:
-- Population allele frequencies
-- Network-derived scores
-- Variant-level quantitative annotations
+## 3. Local Data Processing (Placeholder)
 
-Standard normalization or scaling is applied locally.
+*Detailed technical documentation for feature extraction is in development.*
 
-3. Categorical Feature Encoding
+Processing is executed locally at each client node to preserve data privacy:
 
-Examples include:
-	•	Variant type
-	•	Gene identifier
-	•	Inheritance pattern
+1. **Text Embedding:** Clinical descriptions are vectorized via **PubMedBERT**.
+2. **Normalization:** Numerical features (AF, network centrality) are scaled locally.
+3. **Encoding:** Categorical features (inheritance patterns, variant types) are label-encoded.
 
-Encoded using:
-- One-hot encoding or
-- Label encoding (depending on feature cardinality)
+---
 
-4. Feature Vector Construction
+## 4. Federated Analysis: Subtype Discovery
 
+The framework simulates five institutional silos partitioned by superpopulation (AFR, AMR, EAS, EUR, SAS).
 
-For each record:
-- Text columns are embedded using PubMedBERT
-- Numerical features are normalized (e.g. allele frequencies, network scores)
-- Categorical features are encoded (one-hot or label encoding)
-- All features are concatenated into a single fixed-length feature vector
+### 4.1 Vertical Federated K-Means
 
-The resulting feature matrix is used for downstream analysis.
+Molecular subtypes are discovered through a decentralized K-Means algorithm:
 
+* **Local Iteration:** Clients compute cluster assignments and centroids based on local synthetic cohorts.
+* **Global Aggregation:** Centroids are sent to a central server for federated averaging.
+* **Broadcast:** Updated global centroids are returned to clients; the process repeats until convergence (change < 0.001).
 
+### 4.2 Analytical Metrics
 
-# 2. Unsupervised Analysis: Subtype Discovery
+* **Silhouette Score:** Evaluates the cohesion and separation of discovered molecular clusters.
+* **Clustering Stability:** Validated via bootstrap resampling (100 iterations).
+* **Biological Validation (Placeholder):** Analysis of cluster-driving features and pathway enrichment.
 
-Goal:
+---
 
-To discover molecular subtypes of ALS-associated genes and variants via clustering.
+## 5. Scientific Objectives
 
-# 2.1 Vertical Federated Clustering Implementation
+* **Subtype Discovery:** Identifying coherent molecular signatures across diverse ancestral backgrounds.
+* **Feature Validity:** Confirming that integrated annotations contain sufficient signal to distinguish ALS-associated genes.
+* **Federated Feasibility:** Demonstrating that analytical fidelity is maintained when data is physically separated across institutional nodes.
+* **Ground Truth Validation:** Assessing whether discovered subtypes align with the simulated interaction rules.
 
-Federated learning is introduced at the algorithmic level, not at raw data ingestion.
+---
 
-Client Definition
-- Each client represents an institution
-- Each client is a public database
+## Data Sources
 
-Federated K-Means
-1. Each client computes:
-- Local cluster assignments
-- Local centroids based on its subset of data
-2. Clients send locally computed embeddings to the server
-3. The server aggregates centroids via federated averaging
-4. Updated global centroids are broadcast back to clients
-
-This process is repeated until convergence.
-
-Convergence criterion:
-Change in centroid position < 0.001
-
-
-# 2.2 Unsupervised Validation
-- Internal metrics
-- Silhouette score
-- Davies–Bouldin index
-- Biological validation
-- Gene enrichment analysis
-- Pathway and functional coherence
-- Stability analysis
-- Bootstrap resampling (100 iterations)
-- Cluster consistency across resamples
-
-
-# 3. Supervised Analysis: Feature Validation
-
-Goal
-
-To validate that extracted features are biologically informative, rather than clustering artifacts.
-
-# 3.1 Classification Task
-- Target: Gene identity
-(SOD1, C9orf72, FUS, TARDBP, others)
-- Input: Same feature set used in clustering
-- Train/test split: 80/20, stratified by gene
-
-
-# 3.2 Models
-- XGBoost classifier
-- TabTransformer (comparison model)
-
-
-# 3.3 Supervised Validation
-- Metrics
-- Accuracy
-- Weighted F1-score
-- Confusion matrix
-- Feature importance
-- SHAP value analysis
-- Cross-validation
-- 5-fold stratified cross-validation
-
-
-# 4. Integration & Cross-Validation
-
-To connect unsupervised discovery with supervised validation:
-- Compare cluster assignments with gene prediction performance
-- Assess whether gene pairs with high supervised separability form distinct clusters
-- Use supervised feature importance to interpret cluster-driving features
-- Evaluate consistency between molecular subtypes and gene-level predictability
-
-
+* **ClinVar:** Pathogenic variant curation.
+* **gnomAD:** Population-level allele frequencies.
+* **OMIM/Orphanet:** Clinical gene–disease associations.
+* **STRING:** Protein–protein interaction network topology.
 
 # Contributers 
 
