@@ -126,7 +126,7 @@ Molecular subtypes are discovered through a decentralized K-Means algorithm:
 | Bill Paseman | bill@rarekidneycancer.org | 0000-0002-5020-0866 | |
 | Chantera Lazard | lazard.c@northeastern.edu | 0009-0006-1367-3812 | Northeastern University | 
 | Jialan Ma | jialanma7@gmail.com |0009-0007-2670-9076 | Broad Institute of MIT and Harvard |
-| Kushal Koirala | | 0009-0009-7935-4533 | University of North Carolina | 
+| Kushal Koirala | kkoirala@unc.edu | 0009-0009-7935-4533 | University of North Carolina | 
 | Kyulin Kim | | | | 
 | Nikita Rajesh | | | | 
 | Paul Kao | | | |
