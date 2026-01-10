@@ -1,0 +1,68 @@
+================================================================================
+ALS SYNTHETIC PATIENT GENERATION - VALIDATION REPORT
+Generated: 2026-01-09 12:03:13
+================================================================================
+
+CONFIGURATION
+----------------------------------------
+Patients per population: 3,000
+Total patients: 15,000
+Populations: AFR, AMR, EAS, EUR, SAS
+Random seed: 42
+
+PATIENT STATISTICS
+----------------------------------------
+Total patients: 15,000
+Carriers: 6,418 (42.8%)
+Mean variants per carrier: 1.31
+
+VARIANT STATISTICS
+----------------------------------------
+Total variants: 431
+Variants with carriers: 431
+Mean carriers per variant: 19.5
+AF-Carrier correlation: 0.962
+
+SUBTYPE DISTRIBUTION
+----------------------------------------
+primary_subtype
+ALS1_Classical       1558
+ALS_FTD               737
+ALS2_Juvenile         735
+ALS5_Juvenile         448
+ALS12_Classical       412
+ALS_Unspecified       409
+ALS_Multisystem       312
+ALS6_Aggressive       302
+ALS14_Multisystem     282
+ALS4_Juvenile         229
+ALS10_Classical       155
+BVVL_Juvenile         144
+ALS15_XLinked         119
+ALS_Risk              105
+ALS16_Juvenile        103
+ALS_Parkinsonism       93
+ALS11_Classical        79
+ALS9_Classical         41
+ALS19_Classical        39
+ALS20_Multisystem      32
+ALS22_Classical        29
+ALS17_FTD              21
+SMA_Related            18
+ALS23_Classical        11
+ALS_Modifier            3
+ALS_Mitochondrial       2
+
+PROGRESSION DISTRIBUTION
+----------------------------------------
+predicted_progression
+Moderate    3969
+Fast        2164
+Slow         285
+
+MODIFIER TYPE DISTRIBUTION
+----------------------------------------
+modifier_type
+Neutral        6062
+Protective      271
+Aggravating      85

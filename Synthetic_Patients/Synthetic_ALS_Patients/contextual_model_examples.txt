@@ -1,0 +1,199 @@
+================================================================================
+CONTEXTUAL INTERACTION MODEL - WORKED EXAMPLES
+================================================================================
+
+This document demonstrates how population-specific allele frequencies
+modulate disease severity through the Contextual Penetrance Model.
+
+MODEL PARAMETERS:
+  • Protective threshold: Ratio > 1.5
+  • Aggravating threshold: Ratio < 0.5
+  • Protective modifier: 0.8
+  • Aggravating modifier: 1.2
+  • Slow progression threshold: Score < 0.6
+  • Fast progression threshold: Score > 0.85
+
+================================================================================
+EXAMPLES:
+================================================================================
+
+EXAMPLE 1: AFR_00007
+----------------------------------------
+  Population: AFR
+  Variant: 12:64464386 (TBK1)
+  Population AF: 0.001425
+  Global AF: 0.000900
+  Allelic Ratio: 1.583
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.78
+  Interaction Score: 0.624
+  Predicted Progression: Moderate
+
+  INTERPRETATION: Variant is 1.6x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Moderate progression
+
+EXAMPLE 2: AFR_00063
+----------------------------------------
+  Population: AFR
+  Variant: 15:44598740 (SPG11)
+  Population AF: 0.000705
+  Global AF: 0.000462
+  Allelic Ratio: 1.526
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.616
+  Predicted Progression: Moderate
+
+  INTERPRETATION: Variant is 1.5x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Moderate progression
+
+EXAMPLE 3: AFR_00074
+----------------------------------------
+  Population: AFR
+  Variant: 15:44583974 - 44583983 (SPG11)
+  Population AF: 0.000671
+  Global AF: 0.000352
+  Allelic Ratio: 1.906
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.616
+  Predicted Progression: Moderate
+
+  INTERPRETATION: Variant is 1.9x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Moderate progression
+
+EXAMPLE 4: AFR_00119
+----------------------------------------
+  Population: AFR
+  Variant: rs121909542 (ANG)
+  Population AF: 0.004185
+  Global AF: 0.002589
+  Allelic Ratio: 1.617
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.68
+  Interaction Score: 0.544
+  Predicted Progression: Slow
+
+  INTERPRETATION: Variant is 1.6x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Slow progression
+
+EXAMPLE 5: AFR_00123
+----------------------------------------
+  Population: AFR
+  Variant: rs1553122918 (PARK7)
+  Population AF: 0.000620
+  Global AF: 0.000338
+  Allelic Ratio: 1.835
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.616
+  Predicted Progression: Moderate
+
+  INTERPRETATION: Variant is 1.8x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Moderate progression
+
+EXAMPLE 6: AFR_00137
+----------------------------------------
+  Population: AFR
+  Variant: rs121909669 (FUS)
+  Population AF: 0.000191
+  Global AF: 0.000117
+  Allelic Ratio: 1.632
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.9
+  Interaction Score: 0.720
+  Predicted Progression: Moderate
+
+  INTERPRETATION: Variant is 1.6x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Moderate progression
+
+EXAMPLE 7: AFR_00144
+----------------------------------------
+  Population: AFR
+  Variant: 9:34635632 (SIGMAR1)
+  Population AF: 0.001453
+  Global AF: 0.000953
+  Allelic Ratio: 1.525
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.52
+  Interaction Score: 0.499
+  Predicted Progression: Slow
+
+  INTERPRETATION: Variant is 1.5x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Slow progression
+
+EXAMPLE 8: AFR_00156
+----------------------------------------
+  Population: AFR
+  Variant: rs1213175712 (ALS2)
+  Population AF: 0.001332
+  Global AF: 0.000805
+  Allelic Ratio: 1.654
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.572
+  Predicted Progression: Slow
+
+  INTERPRETATION: Variant is 1.7x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Slow progression
+
+EXAMPLE 9: AFR_00163
+----------------------------------------
+  Population: AFR
+  Variant: rs1690335308 (ALS2)
+  Population AF: 0.001583
+  Global AF: 0.001040
+  Allelic Ratio: 1.523
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.572
+  Predicted Progression: Slow
+
+  INTERPRETATION: Variant is 1.5x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Slow progression
+
+EXAMPLE 10: AFR_00179
+----------------------------------------
+  Population: AFR
+  Variant: rs1690335308 (ALS2)
+  Population AF: 0.001583
+  Global AF: 0.001040
+  Allelic Ratio: 1.523
+  Modifier Type: Protective
+  Ancestral Modifier: 0.8
+  Base Impact: 0.55
+  Interaction Score: 0.572
+  Predicted Progression: Slow
+
+  INTERPRETATION: Variant is 1.5x MORE common in AFR
+  than the global average. This suggests the population may have
+  evolved genetic modifiers that buffer the pathogenic effect.
+  Result: 20% REDUCED disease impact → Slow progression
+
