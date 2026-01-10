@@ -8,8 +8,8 @@
             "executor": {
                 "path": "fed_kmeans_components.FederatedKMeansExecutor",
                 "args": {
-                    "data_dir": "/Users/apple/Desktop/Projects/cmu_biohack/RAIDers/nvflare/kmeans/clients_data",
-                    "k": 8
+                    "data_dir": "/home/ark/coding/abcd/RAIDers/nvflare/kmeans/clients_data",
+                    "k": 5
                 }
             }
         }

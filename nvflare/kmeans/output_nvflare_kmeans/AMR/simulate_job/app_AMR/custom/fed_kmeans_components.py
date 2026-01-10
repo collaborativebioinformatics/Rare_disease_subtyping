@@ -28,7 +28,7 @@ class FederatedKMeansExecutor(Executor):
 
     @staticmethod
     def _to_matrix(df: pd.DataFrame) -> np.ndarray:
-        drop_cols = {"patient_id", "superpopulation"}
+        drop_cols = {"patient_id", "superpopulation", "n_variants_carried", "primary_gene", "primary_condition", "primary_subtype", "onset_type","base_impact","allelic_ratio","ancestral_modifier","modifier_type","consequence_modifier","interaction_score","predicted_progression", "all_genes","all_subtypes"}
         feat_cols = [c for c in df.columns if c not in drop_cols]
         return df[feat_cols].to_numpy(dtype=np.float32)
 
@@ -180,7 +180,7 @@ class KMeansShareableGenerator(ShareableGenerator):
 
     def _bootstrap_centers(self) -> np.ndarray:
         df = pd.read_csv(self.init_csv)
-        drop_cols = {"patient_id", "superpopulation"}
+        drop_cols = {"patient_id", "superpopulation", "n_variants_carried", "primary_gene", "primary_condition", "primary_subtype", "onset_type","base_impact","allelic_ratio","ancestral_modifier","modifier_type","consequence_modifier","interaction_score","predicted_progression", "all_genes","all_subtypes"}
         feat_cols = [c for c in df.columns if c not in drop_cols]
         X = df[feat_cols].to_numpy(dtype=np.float32)
 

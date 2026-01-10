@@ -1,5 +1,5 @@
 {
-    "name": "fed_kmeans_k8_r40",
+    "name": "fed_kmeans_k5_r10",
     "resource_spec": {},
     "min_clients": 1,
     "deploy_map": {
@@ -7,7 +7,7 @@
             "@ALL"
         ]
     },
-    "job_folder_name": "fed_kmeans_k8_r40",
+    "job_folder_name": "fed_kmeans_k5_r10",
     "byoc": true,
     "job_clients": [
         {

@@ -1,433 +1,131 @@
-2026-01-09 20:16:57,684 - ClientTaskWorker - INFO - ClientTaskWorker started to run
-2026-01-09 20:16:57,751 - CoreCell - INFO - AFR.simulate_job: created backbone external connector to tcp://localhost:61488
-2026-01-09 20:16:57,751 - conn_manager - INFO - Connector [CH00001 ACTIVE tcp://localhost:61488] is starting
-2026-01-09 20:16:57,752 - Cell - INFO - Register blob CB for channel='server_command', topic='get_task'
-2026-01-09 20:16:57,752 - Cell - INFO - Register blob CB for channel='server_command', topic='submit_update'
-2026-01-09 20:16:57,752 - conn_manager - INFO - Connection [CN00002 127.0.0.1:61514 => 127.0.0.1:61488] is created: PID: 79047
-2026-01-09 20:16:57,857 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Request
-2026-01-09 20:16:57,857 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Abort
-2026-01-09 20:16:57,930 - utils - INFO - Note: NumExpr detected 10 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-2026-01-09 20:16:57,930 - utils - INFO - NumExpr defaulting to 8 threads.
-2026-01-09 20:16:58,069 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Request
-2026-01-09 20:16:58,070 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Abort
-2026-01-09 20:16:58,070 - AuxRunner - INFO - registered aux handler for topic __end_run__
-2026-01-09 20:16:58,070 - AuxRunner - INFO - registered aux handler for topic __do_task__
-2026-01-09 20:16:58,070 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
-2026-01-09 20:16:58,070 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
-2026-01-09 20:16:58,070 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
-2026-01-09 20:16:58,071 - AuxRunner - INFO - registered aux handler for topic __task_check__
-2026-01-09 20:16:58,584 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - synced to parent server in 0.5132138729095459 seconds
-2026-01-09 20:16:58,584 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
-2026-01-09 20:16:58,585 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
-2026-01-09 20:16:58,585 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
-2026-01-09 20:16:58,585 - AuxRunner - INFO - registered aux handler for topic fed.event
-2026-01-09 20:16:58,586 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - client runner started
-2026-01-09 20:16:58,586 - ClientTaskWorker - INFO - Initialize ClientRunner for client: AFR
-2026-01-09 20:16:58,594 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.007654 seconds
-2026-01-09 20:16:58,594 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:16:58,595 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=576eda40-011a-4ca7-ac9f-d1ee52927ce6
-2026-01-09 20:16:58,595 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=576eda40-011a-4ca7-ac9f-d1ee52927ce6] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:16:58,719 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=576eda40-011a-4ca7-ac9f-d1ee52927ce6] - finished processing task
-2026-01-09 20:16:58,725 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=576eda40-011a-4ca7-ac9f-d1ee52927ce6] - start to send task result to server
-2026-01-09 20:16:58,725 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:16:58,771 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.045874 seconds
-2026-01-09 20:16:58,771 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=576eda40-011a-4ca7-ac9f-d1ee52927ce6] - task result sent to server
-2026-01-09 20:16:58,771 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:00,801 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.006525 seconds
-2026-01-09 20:17:00,802 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:00,802 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=a8c8274c-1a00-424e-97fa-da94901da555
-2026-01-09 20:17:00,802 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a8c8274c-1a00-424e-97fa-da94901da555] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:00,822 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a8c8274c-1a00-424e-97fa-da94901da555] - finished processing task
-2026-01-09 20:17:00,845 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a8c8274c-1a00-424e-97fa-da94901da555] - start to send task result to server
-2026-01-09 20:17:00,846 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:00,873 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.027025 seconds
-2026-01-09 20:17:00,873 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a8c8274c-1a00-424e-97fa-da94901da555] - task result sent to server
-2026-01-09 20:17:00,873 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:02,905 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.025722 seconds
-2026-01-09 20:17:02,906 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:02,906 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=743cf46e-70b2-46a7-b0ce-6e4f7db62041
-2026-01-09 20:17:02,906 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=743cf46e-70b2-46a7-b0ce-6e4f7db62041] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:02,923 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=743cf46e-70b2-46a7-b0ce-6e4f7db62041] - finished processing task
-2026-01-09 20:17:02,926 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=743cf46e-70b2-46a7-b0ce-6e4f7db62041] - start to send task result to server
-2026-01-09 20:17:02,927 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:02,947 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020466 seconds
-2026-01-09 20:17:02,947 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=743cf46e-70b2-46a7-b0ce-6e4f7db62041] - task result sent to server
-2026-01-09 20:17:02,948 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:04,962 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.008606 seconds
-2026-01-09 20:17:04,962 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:04,962 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=bd4a70b2-7ead-472f-ad32-68a57d62ca85
-2026-01-09 20:17:04,962 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=bd4a70b2-7ead-472f-ad32-68a57d62ca85] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:04,974 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=bd4a70b2-7ead-472f-ad32-68a57d62ca85] - finished processing task
-2026-01-09 20:17:04,979 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=bd4a70b2-7ead-472f-ad32-68a57d62ca85] - start to send task result to server
-2026-01-09 20:17:04,979 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:05,000 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.021093 seconds
-2026-01-09 20:17:05,001 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=bd4a70b2-7ead-472f-ad32-68a57d62ca85] - task result sent to server
-2026-01-09 20:17:05,001 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:07,011 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.004784 seconds
-2026-01-09 20:17:07,012 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:07,012 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=656dba48-0be0-4b3a-b5ef-d33f63479ddf
-2026-01-09 20:17:07,012 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=656dba48-0be0-4b3a-b5ef-d33f63479ddf] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:07,021 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=656dba48-0be0-4b3a-b5ef-d33f63479ddf] - finished processing task
-2026-01-09 20:17:07,024 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=656dba48-0be0-4b3a-b5ef-d33f63479ddf] - start to send task result to server
-2026-01-09 20:17:07,024 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:07,050 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.025054 seconds
-2026-01-09 20:17:07,050 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=656dba48-0be0-4b3a-b5ef-d33f63479ddf] - task result sent to server
-2026-01-09 20:17:07,050 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:09,070 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.014812 seconds
-2026-01-09 20:17:09,071 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:09,071 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=2e09d905-d21c-4cee-b626-42011d4e6ff8
-2026-01-09 20:17:09,071 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2e09d905-d21c-4cee-b626-42011d4e6ff8] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:09,088 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2e09d905-d21c-4cee-b626-42011d4e6ff8] - finished processing task
-2026-01-09 20:17:09,091 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2e09d905-d21c-4cee-b626-42011d4e6ff8] - start to send task result to server
-2026-01-09 20:17:09,091 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:09,110 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.019195 seconds
-2026-01-09 20:17:09,111 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2e09d905-d21c-4cee-b626-42011d4e6ff8] - task result sent to server
-2026-01-09 20:17:09,111 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:11,121 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.004103 seconds
-2026-01-09 20:17:11,121 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:11,121 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=a3f72cd4-2c1a-4d3e-9250-b681b431eb18
-2026-01-09 20:17:11,121 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a3f72cd4-2c1a-4d3e-9250-b681b431eb18] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:11,136 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a3f72cd4-2c1a-4d3e-9250-b681b431eb18] - finished processing task
-2026-01-09 20:17:11,139 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a3f72cd4-2c1a-4d3e-9250-b681b431eb18] - start to send task result to server
-2026-01-09 20:17:11,139 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:11,160 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020642 seconds
-2026-01-09 20:17:11,160 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a3f72cd4-2c1a-4d3e-9250-b681b431eb18] - task result sent to server
-2026-01-09 20:17:11,160 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:13,170 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.007476 seconds
-2026-01-09 20:17:13,170 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:13,170 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=029cd17f-0a4f-4aa4-9320-ad80b37cc966
-2026-01-09 20:17:13,170 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=029cd17f-0a4f-4aa4-9320-ad80b37cc966] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:13,180 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=029cd17f-0a4f-4aa4-9320-ad80b37cc966] - finished processing task
-2026-01-09 20:17:13,182 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=029cd17f-0a4f-4aa4-9320-ad80b37cc966] - start to send task result to server
-2026-01-09 20:17:13,183 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:13,202 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.018713 seconds
-2026-01-09 20:17:13,202 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=029cd17f-0a4f-4aa4-9320-ad80b37cc966] - task result sent to server
-2026-01-09 20:17:13,202 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:15,209 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.005962 seconds
-2026-01-09 20:17:15,210 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:15,210 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=a5d26f1f-a3fb-4eed-b57f-e6c1cf89396c
-2026-01-09 20:17:15,210 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a5d26f1f-a3fb-4eed-b57f-e6c1cf89396c] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:15,227 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a5d26f1f-a3fb-4eed-b57f-e6c1cf89396c] - finished processing task
-2026-01-09 20:17:15,233 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a5d26f1f-a3fb-4eed-b57f-e6c1cf89396c] - start to send task result to server
-2026-01-09 20:17:15,233 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:15,254 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020848 seconds
-2026-01-09 20:17:15,254 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=a5d26f1f-a3fb-4eed-b57f-e6c1cf89396c] - task result sent to server
-2026-01-09 20:17:15,254 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:17,263 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003302 seconds
-2026-01-09 20:17:17,264 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:17,264 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=68cb6b6e-cabc-4d8a-909d-e3a833ede303
-2026-01-09 20:17:17,264 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=68cb6b6e-cabc-4d8a-909d-e3a833ede303] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:17,286 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=68cb6b6e-cabc-4d8a-909d-e3a833ede303] - finished processing task
-2026-01-09 20:17:17,304 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=68cb6b6e-cabc-4d8a-909d-e3a833ede303] - start to send task result to server
-2026-01-09 20:17:17,304 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:17,327 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.022894 seconds
-2026-01-09 20:17:17,327 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=68cb6b6e-cabc-4d8a-909d-e3a833ede303] - task result sent to server
-2026-01-09 20:17:17,327 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:19,332 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003282 seconds
-2026-01-09 20:17:19,333 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:19,334 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=575c44d7-54a4-491d-b2c1-d92a1f587e61
-2026-01-09 20:17:19,334 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=575c44d7-54a4-491d-b2c1-d92a1f587e61] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:19,346 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=575c44d7-54a4-491d-b2c1-d92a1f587e61] - finished processing task
-2026-01-09 20:17:19,364 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=575c44d7-54a4-491d-b2c1-d92a1f587e61] - start to send task result to server
-2026-01-09 20:17:19,365 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:19,387 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.022046 seconds
-2026-01-09 20:17:19,387 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=575c44d7-54a4-491d-b2c1-d92a1f587e61] - task result sent to server
-2026-01-09 20:17:19,387 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:21,398 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.005408 seconds
-2026-01-09 20:17:21,399 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:21,399 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=4082e8e3-57dd-4c1e-aae8-aa38744272fc
-2026-01-09 20:17:21,399 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4082e8e3-57dd-4c1e-aae8-aa38744272fc] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:21,414 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4082e8e3-57dd-4c1e-aae8-aa38744272fc] - finished processing task
-2026-01-09 20:17:21,427 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4082e8e3-57dd-4c1e-aae8-aa38744272fc] - start to send task result to server
-2026-01-09 20:17:21,427 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:21,460 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.032952 seconds
-2026-01-09 20:17:21,461 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4082e8e3-57dd-4c1e-aae8-aa38744272fc] - task result sent to server
-2026-01-09 20:17:21,461 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:23,480 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.012671 seconds
-2026-01-09 20:17:23,481 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:23,481 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=ca0dd31f-b96f-491d-b282-ab4af10b1bb9
-2026-01-09 20:17:23,482 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ca0dd31f-b96f-491d-b282-ab4af10b1bb9] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:23,500 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ca0dd31f-b96f-491d-b282-ab4af10b1bb9] - finished processing task
-2026-01-09 20:17:23,512 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ca0dd31f-b96f-491d-b282-ab4af10b1bb9] - start to send task result to server
-2026-01-09 20:17:23,512 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:23,543 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.030394 seconds
-2026-01-09 20:17:23,543 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ca0dd31f-b96f-491d-b282-ab4af10b1bb9] - task result sent to server
-2026-01-09 20:17:23,543 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:25,550 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.005438 seconds
-2026-01-09 20:17:25,551 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:25,551 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=692978e3-c2bd-480b-903f-77fe439ac9d6
-2026-01-09 20:17:25,551 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=692978e3-c2bd-480b-903f-77fe439ac9d6] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:25,568 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=692978e3-c2bd-480b-903f-77fe439ac9d6] - finished processing task
-2026-01-09 20:17:25,603 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=692978e3-c2bd-480b-903f-77fe439ac9d6] - start to send task result to server
-2026-01-09 20:17:25,603 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:25,635 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.031275 seconds
-2026-01-09 20:17:25,635 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=692978e3-c2bd-480b-903f-77fe439ac9d6] - task result sent to server
-2026-01-09 20:17:25,635 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:27,675 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.029150 seconds
-2026-01-09 20:17:27,677 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:27,677 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=754b5aca-6ddc-4015-9fe4-2d32a437b8f8
-2026-01-09 20:17:27,678 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=754b5aca-6ddc-4015-9fe4-2d32a437b8f8] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:27,712 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=754b5aca-6ddc-4015-9fe4-2d32a437b8f8] - finished processing task
-2026-01-09 20:17:27,718 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=754b5aca-6ddc-4015-9fe4-2d32a437b8f8] - start to send task result to server
-2026-01-09 20:17:27,719 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:27,754 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.033781 seconds
-2026-01-09 20:17:27,754 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=754b5aca-6ddc-4015-9fe4-2d32a437b8f8] - task result sent to server
-2026-01-09 20:17:27,754 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:30,032 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.237868 seconds
-2026-01-09 20:17:30,107 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:30,129 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=929096db-c858-4d56-bc7a-36287ff17fe6
-2026-01-09 20:17:30,132 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=929096db-c858-4d56-bc7a-36287ff17fe6] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:30,180 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=929096db-c858-4d56-bc7a-36287ff17fe6] - finished processing task
-2026-01-09 20:17:30,198 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=929096db-c858-4d56-bc7a-36287ff17fe6] - start to send task result to server
-2026-01-09 20:17:30,198 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:30,224 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.025253 seconds
-2026-01-09 20:17:30,224 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=929096db-c858-4d56-bc7a-36287ff17fe6] - task result sent to server
-2026-01-09 20:17:30,224 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:32,296 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.015982 seconds
-2026-01-09 20:17:32,302 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:32,302 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=407e3688-47c7-4d46-939e-f2fd55fc491a
-2026-01-09 20:17:32,303 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=407e3688-47c7-4d46-939e-f2fd55fc491a] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:32,321 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=407e3688-47c7-4d46-939e-f2fd55fc491a] - finished processing task
-2026-01-09 20:17:32,337 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=407e3688-47c7-4d46-939e-f2fd55fc491a] - start to send task result to server
-2026-01-09 20:17:32,337 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:32,377 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.040039 seconds
-2026-01-09 20:17:32,378 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=407e3688-47c7-4d46-939e-f2fd55fc491a] - task result sent to server
-2026-01-09 20:17:32,378 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:34,396 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.012139 seconds
-2026-01-09 20:17:34,397 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:34,397 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=6b403bd8-33eb-4730-a9ca-e83e83e09d7f
-2026-01-09 20:17:34,397 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6b403bd8-33eb-4730-a9ca-e83e83e09d7f] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:34,413 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6b403bd8-33eb-4730-a9ca-e83e83e09d7f] - finished processing task
-2026-01-09 20:17:34,415 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6b403bd8-33eb-4730-a9ca-e83e83e09d7f] - start to send task result to server
-2026-01-09 20:17:34,415 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:34,443 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.027999 seconds
-2026-01-09 20:17:34,444 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6b403bd8-33eb-4730-a9ca-e83e83e09d7f] - task result sent to server
-2026-01-09 20:17:34,444 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:36,464 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.011882 seconds
-2026-01-09 20:17:36,464 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:36,465 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=6ab7b410-5ab7-4889-96b4-59a03e7c391d
-2026-01-09 20:17:36,465 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6ab7b410-5ab7-4889-96b4-59a03e7c391d] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:36,485 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6ab7b410-5ab7-4889-96b4-59a03e7c391d] - finished processing task
-2026-01-09 20:17:36,490 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6ab7b410-5ab7-4889-96b4-59a03e7c391d] - start to send task result to server
-2026-01-09 20:17:36,490 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:36,515 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.024591 seconds
-2026-01-09 20:17:36,515 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6ab7b410-5ab7-4889-96b4-59a03e7c391d] - task result sent to server
-2026-01-09 20:17:36,515 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:38,524 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002819 seconds
-2026-01-09 20:17:38,524 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:38,524 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=748629ad-48c4-43a7-ac79-eab19047fd37
-2026-01-09 20:17:38,524 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=748629ad-48c4-43a7-ac79-eab19047fd37] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:38,541 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=748629ad-48c4-43a7-ac79-eab19047fd37] - finished processing task
-2026-01-09 20:17:38,543 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=748629ad-48c4-43a7-ac79-eab19047fd37] - start to send task result to server
-2026-01-09 20:17:38,543 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:38,568 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.024600 seconds
-2026-01-09 20:17:38,568 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=748629ad-48c4-43a7-ac79-eab19047fd37] - task result sent to server
-2026-01-09 20:17:38,569 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:40,587 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.011146 seconds
-2026-01-09 20:17:40,589 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:40,590 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=1b60bbe3-fd46-4b2b-98ed-5348a9ab4028
-2026-01-09 20:17:40,590 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=1b60bbe3-fd46-4b2b-98ed-5348a9ab4028] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:40,606 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=1b60bbe3-fd46-4b2b-98ed-5348a9ab4028] - finished processing task
-2026-01-09 20:17:40,610 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=1b60bbe3-fd46-4b2b-98ed-5348a9ab4028] - start to send task result to server
-2026-01-09 20:17:40,611 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:40,631 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020343 seconds
-2026-01-09 20:17:40,631 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=1b60bbe3-fd46-4b2b-98ed-5348a9ab4028] - task result sent to server
-2026-01-09 20:17:40,632 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:42,639 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002421 seconds
-2026-01-09 20:17:42,639 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:42,639 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=af11a99a-88d0-43cc-aa59-0a2c48304ea2
-2026-01-09 20:17:42,639 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=af11a99a-88d0-43cc-aa59-0a2c48304ea2] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:42,655 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=af11a99a-88d0-43cc-aa59-0a2c48304ea2] - finished processing task
-2026-01-09 20:17:42,657 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=af11a99a-88d0-43cc-aa59-0a2c48304ea2] - start to send task result to server
-2026-01-09 20:17:42,657 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:42,677 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.019940 seconds
-2026-01-09 20:17:42,677 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=af11a99a-88d0-43cc-aa59-0a2c48304ea2] - task result sent to server
-2026-01-09 20:17:42,677 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:44,685 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002807 seconds
-2026-01-09 20:17:44,685 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:44,685 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=ac966962-d65d-4eab-bc62-fee003d04db2
-2026-01-09 20:17:44,686 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ac966962-d65d-4eab-bc62-fee003d04db2] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:44,696 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ac966962-d65d-4eab-bc62-fee003d04db2] - finished processing task
-2026-01-09 20:17:44,699 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ac966962-d65d-4eab-bc62-fee003d04db2] - start to send task result to server
-2026-01-09 20:17:44,700 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:44,721 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.021714 seconds
-2026-01-09 20:17:44,722 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=ac966962-d65d-4eab-bc62-fee003d04db2] - task result sent to server
-2026-01-09 20:17:44,722 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:46,825 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.044504 seconds
-2026-01-09 20:17:46,826 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:46,826 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=c1ccb795-26cd-4fcd-81e1-c053308c85fc
-2026-01-09 20:17:46,827 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c1ccb795-26cd-4fcd-81e1-c053308c85fc] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:46,881 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c1ccb795-26cd-4fcd-81e1-c053308c85fc] - finished processing task
-2026-01-09 20:17:46,904 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c1ccb795-26cd-4fcd-81e1-c053308c85fc] - start to send task result to server
-2026-01-09 20:17:46,904 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:46,937 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.033002 seconds
-2026-01-09 20:17:46,938 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c1ccb795-26cd-4fcd-81e1-c053308c85fc] - task result sent to server
-2026-01-09 20:17:46,938 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:48,968 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002766 seconds
-2026-01-09 20:17:48,968 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:48,968 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=fb66c41e-edce-4a72-b216-041912040c9e
-2026-01-09 20:17:48,968 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=fb66c41e-edce-4a72-b216-041912040c9e] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:48,989 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=fb66c41e-edce-4a72-b216-041912040c9e] - finished processing task
-2026-01-09 20:17:48,991 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=fb66c41e-edce-4a72-b216-041912040c9e] - start to send task result to server
-2026-01-09 20:17:48,992 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:49,015 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.023436 seconds
-2026-01-09 20:17:49,015 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=fb66c41e-edce-4a72-b216-041912040c9e] - task result sent to server
-2026-01-09 20:17:49,016 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:51,021 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002672 seconds
-2026-01-09 20:17:51,021 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:51,022 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=5cf04183-1621-4bec-83dd-d8a020c1dec4
-2026-01-09 20:17:51,022 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5cf04183-1621-4bec-83dd-d8a020c1dec4] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:51,042 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5cf04183-1621-4bec-83dd-d8a020c1dec4] - finished processing task
-2026-01-09 20:17:51,047 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5cf04183-1621-4bec-83dd-d8a020c1dec4] - start to send task result to server
-2026-01-09 20:17:51,047 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:51,072 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.024860 seconds
-2026-01-09 20:17:51,073 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5cf04183-1621-4bec-83dd-d8a020c1dec4] - task result sent to server
-2026-01-09 20:17:51,073 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:53,082 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003476 seconds
-2026-01-09 20:17:53,083 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:53,083 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=4e01537f-43d4-4318-a939-fed4f4c21e9a
-2026-01-09 20:17:53,083 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4e01537f-43d4-4318-a939-fed4f4c21e9a] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:53,094 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4e01537f-43d4-4318-a939-fed4f4c21e9a] - finished processing task
-2026-01-09 20:17:53,097 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4e01537f-43d4-4318-a939-fed4f4c21e9a] - start to send task result to server
-2026-01-09 20:17:53,097 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:53,120 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.022134 seconds
-2026-01-09 20:17:53,120 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=4e01537f-43d4-4318-a939-fed4f4c21e9a] - task result sent to server
-2026-01-09 20:17:53,120 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:55,130 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003949 seconds
-2026-01-09 20:17:55,130 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:55,130 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=e6ebd785-8949-4364-95c5-14ca479fa807
-2026-01-09 20:17:55,130 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6ebd785-8949-4364-95c5-14ca479fa807] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:55,140 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6ebd785-8949-4364-95c5-14ca479fa807] - finished processing task
-2026-01-09 20:17:55,143 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6ebd785-8949-4364-95c5-14ca479fa807] - start to send task result to server
-2026-01-09 20:17:55,143 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:55,163 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.019582 seconds
-2026-01-09 20:17:55,163 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6ebd785-8949-4364-95c5-14ca479fa807] - task result sent to server
-2026-01-09 20:17:55,163 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:57,172 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003009 seconds
-2026-01-09 20:17:57,172 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:57,172 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=cd2cc13b-5b56-461b-a737-e08bab19082a
-2026-01-09 20:17:57,172 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cd2cc13b-5b56-461b-a737-e08bab19082a] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:57,184 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cd2cc13b-5b56-461b-a737-e08bab19082a] - finished processing task
-2026-01-09 20:17:57,188 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cd2cc13b-5b56-461b-a737-e08bab19082a] - start to send task result to server
-2026-01-09 20:17:57,188 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:57,208 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020022 seconds
-2026-01-09 20:17:57,208 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cd2cc13b-5b56-461b-a737-e08bab19082a] - task result sent to server
-2026-01-09 20:17:57,208 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:17:59,216 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002683 seconds
-2026-01-09 20:17:59,217 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:17:59,217 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=7fc1e9a3-ad43-4012-ae9a-dbbc2f8fcbeb
-2026-01-09 20:17:59,218 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=7fc1e9a3-ad43-4012-ae9a-dbbc2f8fcbeb] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:17:59,229 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=7fc1e9a3-ad43-4012-ae9a-dbbc2f8fcbeb] - finished processing task
-2026-01-09 20:17:59,231 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=7fc1e9a3-ad43-4012-ae9a-dbbc2f8fcbeb] - start to send task result to server
-2026-01-09 20:17:59,232 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:17:59,251 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.018964 seconds
-2026-01-09 20:17:59,251 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=7fc1e9a3-ad43-4012-ae9a-dbbc2f8fcbeb] - task result sent to server
-2026-01-09 20:17:59,251 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:01,259 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002623 seconds
-2026-01-09 20:18:01,259 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:01,259 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=e6e5d6c1-f363-461b-aa7a-be0359c3f68c
-2026-01-09 20:18:01,260 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6e5d6c1-f363-461b-aa7a-be0359c3f68c] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:01,272 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6e5d6c1-f363-461b-aa7a-be0359c3f68c] - finished processing task
-2026-01-09 20:18:01,275 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6e5d6c1-f363-461b-aa7a-be0359c3f68c] - start to send task result to server
-2026-01-09 20:18:01,275 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:01,296 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020753 seconds
-2026-01-09 20:18:01,296 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=e6e5d6c1-f363-461b-aa7a-be0359c3f68c] - task result sent to server
-2026-01-09 20:18:01,297 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:03,305 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002726 seconds
-2026-01-09 20:18:03,305 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:03,305 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=8456b59e-9147-4118-bd4c-732fa5ff8dba
-2026-01-09 20:18:03,305 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8456b59e-9147-4118-bd4c-732fa5ff8dba] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:03,315 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8456b59e-9147-4118-bd4c-732fa5ff8dba] - finished processing task
-2026-01-09 20:18:03,317 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8456b59e-9147-4118-bd4c-732fa5ff8dba] - start to send task result to server
-2026-01-09 20:18:03,317 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:03,336 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.018507 seconds
-2026-01-09 20:18:03,336 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8456b59e-9147-4118-bd4c-732fa5ff8dba] - task result sent to server
-2026-01-09 20:18:03,336 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:05,345 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003050 seconds
-2026-01-09 20:18:05,346 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:05,346 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=6cba0409-ccb3-44c9-86fc-d8199fc878a0
-2026-01-09 20:18:05,346 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6cba0409-ccb3-44c9-86fc-d8199fc878a0] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:05,363 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6cba0409-ccb3-44c9-86fc-d8199fc878a0] - finished processing task
-2026-01-09 20:18:05,366 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6cba0409-ccb3-44c9-86fc-d8199fc878a0] - start to send task result to server
-2026-01-09 20:18:05,366 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:05,387 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020690 seconds
-2026-01-09 20:18:05,387 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6cba0409-ccb3-44c9-86fc-d8199fc878a0] - task result sent to server
-2026-01-09 20:18:05,387 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:07,393 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.004333 seconds
-2026-01-09 20:18:07,394 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:07,394 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=3236454e-a443-46b5-844c-bcbfd193175e
-2026-01-09 20:18:07,394 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3236454e-a443-46b5-844c-bcbfd193175e] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:07,418 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3236454e-a443-46b5-844c-bcbfd193175e] - finished processing task
-2026-01-09 20:18:07,420 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3236454e-a443-46b5-844c-bcbfd193175e] - start to send task result to server
-2026-01-09 20:18:07,421 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:07,445 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.024110 seconds
-2026-01-09 20:18:07,445 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3236454e-a443-46b5-844c-bcbfd193175e] - task result sent to server
-2026-01-09 20:18:07,445 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:09,450 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003345 seconds
-2026-01-09 20:18:09,451 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:09,451 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=74b499b7-1653-40b6-863e-0e9a9b3a5c14
-2026-01-09 20:18:09,451 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=74b499b7-1653-40b6-863e-0e9a9b3a5c14] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:09,464 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=74b499b7-1653-40b6-863e-0e9a9b3a5c14] - finished processing task
-2026-01-09 20:18:09,466 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=74b499b7-1653-40b6-863e-0e9a9b3a5c14] - start to send task result to server
-2026-01-09 20:18:09,467 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:09,484 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.017787 seconds
-2026-01-09 20:18:09,485 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=74b499b7-1653-40b6-863e-0e9a9b3a5c14] - task result sent to server
-2026-01-09 20:18:09,485 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:11,639 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.147141 seconds
-2026-01-09 20:18:11,642 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:11,644 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=5789fe8c-7dd2-468e-b2a6-9394bb1ea54e
-2026-01-09 20:18:11,652 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5789fe8c-7dd2-468e-b2a6-9394bb1ea54e] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:11,707 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5789fe8c-7dd2-468e-b2a6-9394bb1ea54e] - finished processing task
-2026-01-09 20:18:11,737 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5789fe8c-7dd2-468e-b2a6-9394bb1ea54e] - start to send task result to server
-2026-01-09 20:18:11,737 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:11,774 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.036311 seconds
-2026-01-09 20:18:11,774 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5789fe8c-7dd2-468e-b2a6-9394bb1ea54e] - task result sent to server
-2026-01-09 20:18:11,775 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:13,784 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.003875 seconds
-2026-01-09 20:18:13,786 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:13,786 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=f38c20b4-054d-444a-892d-417f098b1c45
-2026-01-09 20:18:13,786 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f38c20b4-054d-444a-892d-417f098b1c45] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:13,800 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f38c20b4-054d-444a-892d-417f098b1c45] - finished processing task
-2026-01-09 20:18:13,803 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f38c20b4-054d-444a-892d-417f098b1c45] - start to send task result to server
-2026-01-09 20:18:13,803 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:13,824 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.020927 seconds
-2026-01-09 20:18:13,824 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f38c20b4-054d-444a-892d-417f098b1c45] - task result sent to server
-2026-01-09 20:18:13,824 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:15,832 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002447 seconds
-2026-01-09 20:18:15,833 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:15,833 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=3a7aeefa-b079-4500-92d7-7514d9e90c8d
-2026-01-09 20:18:15,833 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3a7aeefa-b079-4500-92d7-7514d9e90c8d] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:15,843 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3a7aeefa-b079-4500-92d7-7514d9e90c8d] - finished processing task
-2026-01-09 20:18:15,845 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3a7aeefa-b079-4500-92d7-7514d9e90c8d] - start to send task result to server
-2026-01-09 20:18:15,845 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:15,863 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.018062 seconds
-2026-01-09 20:18:15,863 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=3a7aeefa-b079-4500-92d7-7514d9e90c8d] - task result sent to server
-2026-01-09 20:18:15,864 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:17,872 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002726 seconds
-2026-01-09 20:18:17,872 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:17,872 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=2bc17a82-238c-4718-9758-30dbee33bac6
-2026-01-09 20:18:17,873 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2bc17a82-238c-4718-9758-30dbee33bac6] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:17,884 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2bc17a82-238c-4718-9758-30dbee33bac6] - finished processing task
-2026-01-09 20:18:17,886 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2bc17a82-238c-4718-9758-30dbee33bac6] - start to send task result to server
-2026-01-09 20:18:17,886 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:17,906 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.018941 seconds
-2026-01-09 20:18:17,906 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=2bc17a82-238c-4718-9758-30dbee33bac6] - task result sent to server
-2026-01-09 20:18:17,906 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:19,914 - Communicator - INFO - Received from server. getTask: kmeans_step size: 14.8KB (14778 Bytes) time: 0.002673 seconds
-2026-01-09 20:18:19,914 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
-2026-01-09 20:18:19,914 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=8dc5bc96-5dce-4038-820f-5add0dd9ab9a
-2026-01-09 20:18:19,915 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8dc5bc96-5dce-4038-820f-5add0dd9ab9a] - invoking task executor FederatedKMeansExecutor
-2026-01-09 20:18:19,924 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8dc5bc96-5dce-4038-820f-5add0dd9ab9a] - finished processing task
-2026-01-09 20:18:19,926 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8dc5bc96-5dce-4038-820f-5add0dd9ab9a] - start to send task result to server
-2026-01-09 20:18:19,926 - FederatedClient - INFO - Starting to push execute result.
-2026-01-09 20:18:19,946 - Communicator - INFO - SubmitUpdate to: server. size: 28.6KB (28595 Bytes). time: 0.019754 seconds
-2026-01-09 20:18:19,946 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8dc5bc96-5dce-4038-820f-5add0dd9ab9a] - task result sent to server
-2026-01-09 20:18:19,946 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
-2026-01-09 20:18:20,340 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - received request from Server to end current RUN
-2026-01-09 20:18:21,957 - FederatedClient - INFO - pull_task completed. Task name:__end_run__ Status:True 
-2026-01-09 20:18:21,958 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - server asked to end the run
-2026-01-09 20:18:21,958 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - started end-run events sequence
-2026-01-09 20:18:21,958 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - ABOUT_TO_END_RUN fired
-2026-01-09 20:18:21,958 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - Firing CHECK_END_RUN_READINESS ...
-2026-01-09 20:18:21,958 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - END_RUN fired
-2026-01-09 20:18:21,958 - ClientTaskWorker - INFO - End the Simulator run.
+2026-01-09 22:11:49,992 - ClientTaskWorker - INFO - ClientTaskWorker started to run
+2026-01-09 22:11:50,219 - CoreCell - INFO - AFR.simulate_job: created backbone external connector to tcp://localhost:43943
+2026-01-09 22:11:50,219 - conn_manager - INFO - Connector [CH00001 ACTIVE tcp://localhost:43943] is starting
+2026-01-09 22:11:50,220 - Cell - INFO - Register blob CB for channel='server_command', topic='get_task'
+2026-01-09 22:11:50,221 - Cell - INFO - Register blob CB for channel='server_command', topic='submit_update'
+2026-01-09 22:11:50,221 - conn_manager - INFO - Connection [CN00002 127.0.0.1:57506 => 127.0.0.1:43943] is created: PID: 14100
+2026-01-09 22:11:50,322 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Request
+2026-01-09 22:11:50,323 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Abort
+2026-01-09 22:11:50,851 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Request
+2026-01-09 22:11:50,852 - AuxRunner - INFO - registered aux handler for topic ObjectStreamer.Abort
+2026-01-09 22:11:50,853 - AuxRunner - INFO - registered aux handler for topic __end_run__
+2026-01-09 22:11:50,854 - AuxRunner - INFO - registered aux handler for topic __do_task__
+2026-01-09 22:11:50,854 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2026-01-09 22:11:50,855 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
+2026-01-09 22:11:50,856 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
+2026-01-09 22:11:50,856 - AuxRunner - INFO - registered aux handler for topic __task_check__
+2026-01-09 22:11:51,375 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - synced to parent server in 0.5187845230102539 seconds
+2026-01-09 22:11:51,376 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2026-01-09 22:11:51,376 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2026-01-09 22:11:51,377 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2026-01-09 22:11:51,377 - AuxRunner - INFO - registered aux handler for topic fed.event
+2026-01-09 22:11:51,378 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - client runner started
+2026-01-09 22:11:51,378 - ClientTaskWorker - INFO - Initialize ClientRunner for client: AFR
+2026-01-09 22:11:51,390 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.010643 seconds
+2026-01-09 22:11:51,390 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:11:51,391 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=b0284166-08e0-4d32-bf72-a68c2d718c0e
+2026-01-09 22:11:51,392 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b0284166-08e0-4d32-bf72-a68c2d718c0e] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:11:51,534 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b0284166-08e0-4d32-bf72-a68c2d718c0e] - finished processing task
+2026-01-09 22:11:51,546 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b0284166-08e0-4d32-bf72-a68c2d718c0e] - start to send task result to server
+2026-01-09 22:11:51,547 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:11:51,616 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.068138 seconds
+2026-01-09 22:11:51,617 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b0284166-08e0-4d32-bf72-a68c2d718c0e] - task result sent to server
+2026-01-09 22:11:51,619 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:11:53,640 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.014018 seconds
+2026-01-09 22:11:53,641 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:11:53,641 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=8d01737b-d037-43ac-8b20-f80fe3ed426d
+2026-01-09 22:11:53,642 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8d01737b-d037-43ac-8b20-f80fe3ed426d] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:11:53,670 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8d01737b-d037-43ac-8b20-f80fe3ed426d] - finished processing task
+2026-01-09 22:11:53,680 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8d01737b-d037-43ac-8b20-f80fe3ed426d] - start to send task result to server
+2026-01-09 22:11:53,680 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:11:53,742 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.061445 seconds
+2026-01-09 22:11:53,743 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=8d01737b-d037-43ac-8b20-f80fe3ed426d] - task result sent to server
+2026-01-09 22:11:53,744 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:11:55,759 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.010978 seconds
+2026-01-09 22:11:55,760 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:11:55,760 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=b56681ad-324f-446f-9cce-14a4891443d0
+2026-01-09 22:11:55,761 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b56681ad-324f-446f-9cce-14a4891443d0] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:11:55,780 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b56681ad-324f-446f-9cce-14a4891443d0] - finished processing task
+2026-01-09 22:11:55,788 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b56681ad-324f-446f-9cce-14a4891443d0] - start to send task result to server
+2026-01-09 22:11:55,789 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:11:55,835 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.045743 seconds
+2026-01-09 22:11:55,835 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b56681ad-324f-446f-9cce-14a4891443d0] - task result sent to server
+2026-01-09 22:11:55,836 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:11:57,854 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.014218 seconds
+2026-01-09 22:11:57,856 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:11:57,857 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=6c3fbca5-36ae-4eca-ad7f-dfc9f7f605e0
+2026-01-09 22:11:57,859 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6c3fbca5-36ae-4eca-ad7f-dfc9f7f605e0] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:11:57,882 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6c3fbca5-36ae-4eca-ad7f-dfc9f7f605e0] - finished processing task
+2026-01-09 22:11:57,891 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6c3fbca5-36ae-4eca-ad7f-dfc9f7f605e0] - start to send task result to server
+2026-01-09 22:11:57,892 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:11:57,946 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.054302 seconds
+2026-01-09 22:11:57,947 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=6c3fbca5-36ae-4eca-ad7f-dfc9f7f605e0] - task result sent to server
+2026-01-09 22:11:57,948 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:11:59,962 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.009778 seconds
+2026-01-09 22:11:59,963 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:11:59,963 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=cfd770ae-5f3c-43ad-b012-ca451106f58c
+2026-01-09 22:11:59,964 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cfd770ae-5f3c-43ad-b012-ca451106f58c] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:11:59,983 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cfd770ae-5f3c-43ad-b012-ca451106f58c] - finished processing task
+2026-01-09 22:11:59,991 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cfd770ae-5f3c-43ad-b012-ca451106f58c] - start to send task result to server
+2026-01-09 22:11:59,992 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:00,041 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.049062 seconds
+2026-01-09 22:12:00,042 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=cfd770ae-5f3c-43ad-b012-ca451106f58c] - task result sent to server
+2026-01-09 22:12:00,043 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:02,056 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.009815 seconds
+2026-01-09 22:12:02,057 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:12:02,057 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=c0653a47-38da-48c1-971e-ed9eeddb003e
+2026-01-09 22:12:02,058 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c0653a47-38da-48c1-971e-ed9eeddb003e] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:12:02,075 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c0653a47-38da-48c1-971e-ed9eeddb003e] - finished processing task
+2026-01-09 22:12:02,082 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c0653a47-38da-48c1-971e-ed9eeddb003e] - start to send task result to server
+2026-01-09 22:12:02,083 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:02,131 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.047867 seconds
+2026-01-09 22:12:02,132 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=c0653a47-38da-48c1-971e-ed9eeddb003e] - task result sent to server
+2026-01-09 22:12:02,132 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:04,155 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.019547 seconds
+2026-01-09 22:12:04,156 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:12:04,156 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=5d7c1fb2-4d33-4ee7-b141-847c9af4fba4
+2026-01-09 22:12:04,158 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5d7c1fb2-4d33-4ee7-b141-847c9af4fba4] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:12:04,176 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5d7c1fb2-4d33-4ee7-b141-847c9af4fba4] - finished processing task
+2026-01-09 22:12:04,182 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5d7c1fb2-4d33-4ee7-b141-847c9af4fba4] - start to send task result to server
+2026-01-09 22:12:04,183 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:04,234 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.050849 seconds
+2026-01-09 22:12:04,235 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=5d7c1fb2-4d33-4ee7-b141-847c9af4fba4] - task result sent to server
+2026-01-09 22:12:04,235 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:06,247 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.008492 seconds
+2026-01-09 22:12:06,248 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:12:06,249 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=f2084bd5-0a76-4749-95f1-af2d37d01d9c
+2026-01-09 22:12:06,250 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f2084bd5-0a76-4749-95f1-af2d37d01d9c] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:12:06,271 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f2084bd5-0a76-4749-95f1-af2d37d01d9c] - finished processing task
+2026-01-09 22:12:06,278 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f2084bd5-0a76-4749-95f1-af2d37d01d9c] - start to send task result to server
+2026-01-09 22:12:06,279 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:06,329 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.050038 seconds
+2026-01-09 22:12:06,329 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=f2084bd5-0a76-4749-95f1-af2d37d01d9c] - task result sent to server
+2026-01-09 22:12:06,330 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:08,342 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.008935 seconds
+2026-01-09 22:12:08,343 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:12:08,343 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=537447b6-bc28-4cbb-937a-39c042c1f057
+2026-01-09 22:12:08,344 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=537447b6-bc28-4cbb-937a-39c042c1f057] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:12:08,362 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=537447b6-bc28-4cbb-937a-39c042c1f057] - finished processing task
+2026-01-09 22:12:08,370 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=537447b6-bc28-4cbb-937a-39c042c1f057] - start to send task result to server
+2026-01-09 22:12:08,371 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:08,422 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.050647 seconds
+2026-01-09 22:12:08,422 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=537447b6-bc28-4cbb-937a-39c042c1f057] - task result sent to server
+2026-01-09 22:12:08,423 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:10,434 - Communicator - INFO - Received from server. getTask: kmeans_step size: 9.7KB (9734 Bytes) time: 0.008510 seconds
+2026-01-09 22:12:10,435 - FederatedClient - INFO - pull_task completed. Task name:kmeans_step Status:True 
+2026-01-09 22:12:10,435 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - got task assignment: name=kmeans_step, id=b72ebd23-fca0-4e22-90c5-c1b686f0e5b6
+2026-01-09 22:12:10,436 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b72ebd23-fca0-4e22-90c5-c1b686f0e5b6] - invoking task executor FederatedKMeansExecutor
+2026-01-09 22:12:10,457 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b72ebd23-fca0-4e22-90c5-c1b686f0e5b6] - finished processing task
+2026-01-09 22:12:10,466 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b72ebd23-fca0-4e22-90c5-c1b686f0e5b6] - start to send task result to server
+2026-01-09 22:12:10,466 - FederatedClient - INFO - Starting to push execute result.
+2026-01-09 22:12:10,517 - Communicator - INFO - SubmitUpdate to: server. size: 18.5KB (18483 Bytes). time: 0.050346 seconds
+2026-01-09 22:12:10,518 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=kmeans_step, task_id=b72ebd23-fca0-4e22-90c5-c1b686f0e5b6] - task result sent to server
+2026-01-09 22:12:10,518 - ClientTaskWorker - INFO - Finished one task run for client: AFR interval: 2 task_processed: True
+2026-01-09 22:12:10,723 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - received request from Server to end current RUN
+2026-01-09 22:12:12,529 - FederatedClient - INFO - pull_task completed. Task name:__end_run__ Status:True 
+2026-01-09 22:12:12,530 - ClientRunner - INFO - [identity=AFR, run=simulate_job, peer=simulator_server, peer_run=simulate_job] - server asked to end the run
+2026-01-09 22:12:12,530 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - started end-run events sequence
+2026-01-09 22:12:12,531 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - ABOUT_TO_END_RUN fired
+2026-01-09 22:12:12,531 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - Firing CHECK_END_RUN_READINESS ...
+2026-01-09 22:12:12,531 - ClientRunner - INFO - [identity=AFR, run=simulate_job] - END_RUN fired
+2026-01-09 22:12:12,532 - ClientTaskWorker - INFO - End the Simulator run.

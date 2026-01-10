@@ -17,7 +17,7 @@ def parse_args():
     p.add_argument("--num_rounds", type=int, default=25)
     p.add_argument("--seed", type=int, default=7)
     p.add_argument("--data_dir", type=str, default="clients_data")
-    p.add_argument("--init_site", type=str, default="AFR")  # which site to bootstrap centers from
+    p.add_argument("--init_site", type=str, default="EUR")  # which site to bootstrap centers from
     p.add_argument("--workspace", type=str, default="output_nvflare_kmeans")
     p.add_argument("--clients", type=str, default="AFR,AMR,EAS,EUR,SAS")
     p.add_argument("--threads", type=int, default=5)
@@ -68,5 +68,3 @@ if __name__ == "__main__":
     )
 
     print("workspace used:", workspace)
-    print("status", run.get_status())
-    print("result", run.get_result())
