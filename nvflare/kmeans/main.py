@@ -2,7 +2,7 @@ import os
 import argparse
 
 from nvflare.job_config.api import FedJob
-from nvflare.recipe import SimEnv
+from nvflare.recipe import PocEnv
 from nvflare.app_common.workflows.scatter_and_gather import ScatterAndGather
 
 from fed_kmeans_components import (
@@ -14,8 +14,8 @@ from fed_kmeans_components import (
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--k", type=int, default=6)
-    p.add_argument("--num_rounds", type=int, default=25)
-    p.add_argument("--seed", type=int, default=7)
+    p.add_argument("--num_rounds", type=int, default=10)
+    p.add_argument("--seed", type=int, default=2026)
     p.add_argument("--data_dir", type=str, default="clients_data")
     p.add_argument("--init_site", type=str, default="EUR")  # which site to bootstrap centers from
     p.add_argument("--workspace", type=str, default="output_nvflare_kmeans")
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         tasks=["kmeans_step"],
     )
 
-    env = SimEnv(num_clients=len(clients))
+    env = PocEnv(num_clients=len(clients))
 
     run = job.simulator_run(
         workspace=workspace,
