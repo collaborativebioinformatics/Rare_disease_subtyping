@@ -2,6 +2,13 @@
 
 This folder contains biological validation analyses of federated k-means clustering results on synthetic ALS patient data. Our analysis reveals **severity-stratified molecular subtypes** or patient clusters that combine disease severity with distinct pathway dysfunction patterns. 
 
+## Running the Analysis 
+
+To reproduce findings: 
+1. Run `total_pipeline_biological_validation.ipynb`
+2. Requres `synthetic_patients.csv` and cluster centers from federated k-means
+3. Generates all figures and statistical summaries
+
 ## Key Findings
 We found four clinically-informed molecular clusters. 
 | Cluster | Size | Severity | Progression | Dominant Pathways | Key Gene(s) |
